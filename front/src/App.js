@@ -1,6 +1,6 @@
 // App.js
 import React, { useState, useCallback } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SongSearch from "./components/SongSearch";
 import SongList from "./components/SongList";
 import LyricsDisplay from "./components/LyricsDisplay";
@@ -17,6 +17,7 @@ const Home = () => {
   const [loadingSearch, setLoadingSearch] = useState(false);
   const [loadingLyrics, setLoadingLyrics] = useState(false);
   const [error, setError] = useState("");
+  
   const clearError = useCallback(() => setError(""), []);
   const handleSelectSong = useCallback((artist, title) => {
     setSongs([]);
@@ -52,10 +53,10 @@ const Home = () => {
           </section>
         )}
         {!loadingLyrics && lyrics && (
-           <section>
-              <h2>"{selectedSongInfo?.title}" Lyrics</h2>
-              <LyricsDisplay lyrics={lyrics} />
-           </section>
+          <section>
+            <h2>"{selectedSongInfo?.title}" Lyrics</h2>
+            <LyricsDisplay lyrics={lyrics} />
+          </section>
         )}
       </main>
     </div>
@@ -63,13 +64,13 @@ const Home = () => {
 };
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/info" element={<Info />} />
     </Routes>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
