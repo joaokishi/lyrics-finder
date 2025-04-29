@@ -1,0 +1,95 @@
+.popular-songs-container {
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+
+.popular-songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.popular-song-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-song-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.song-cover {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.popular-song-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.popular-song-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.popular-songs-loading,
+.popular-songs-error {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.popular-songs-error {
+  color: #d32f2f;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .popular-songs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 5px;
+  }
+
+  .popular-song-card {
+    padding: 8px;
+  }
+
+  .popular-song-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .popular-song-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Embedded view adjustments */
+@media (max-height: 500px) {
+  .popular-songs-container {
+    padding: 10px 5px;
+    margin-top: 10px;
+  }
+
+  .popular-songs-grid {
+    gap: 10px;
+  }
+} 

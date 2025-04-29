@@ -8,6 +8,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import ErrorMessage from "./components/ErrorMessage";
 import Navbar from "./components/Navbar";
 import Info from "./components/Info";
+import PopularSongs from "./components/PopularSongs";
 import "./App.css";
 
 const Home = () => {
@@ -29,6 +30,9 @@ const Home = () => {
   return (
     <div className="app-container">
       <main>
+        <section>
+          <PopularSongs onSelectSong={handleSelectSong} />
+        </section>
         <section>
           <SongSearch
             setSongs={setSongs}

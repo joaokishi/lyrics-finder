@@ -7,7 +7,7 @@ const Info = () => (
       Lyrics Finder helps you search for your favorite songs and view their lyrics easily. Enter a song name on the home page to get started!
     </p>
     <p>
-      This project is built with React and demonstrates simple music and lyrics search functionality.
+      This project is built with React/Node.js and uses the Deezer API to search for songs and Lyrics.ovh API to search for lyrics.
     </p>
   </div>
 );
