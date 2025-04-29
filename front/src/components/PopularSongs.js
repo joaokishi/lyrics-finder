@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './styles/PopularSongs.css';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://lyrics-finder-0rii.onrender.com";
+
 const PopularSongs = ({ onSelectSong }) => {
   const [popularSongs, setPopularSongs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,7 +13,7 @@ const PopularSongs = ({ onSelectSong }) => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch('https://lyrics-finder-0rii.onrender.com/popular-songs');
+        const response = await fetch(`${API_BASE_URL}/popular-songs`);
         const data = await response.json();
         
         if (data && data.data) {
@@ -25,6 +27,7 @@ const PopularSongs = ({ onSelectSong }) => {
         }
       } catch (err) {
         setError('Could not fetch popular songs.');
+        console.error('Error fetching popular songs:', err);
       } finally {
         setLoading(false);
       }

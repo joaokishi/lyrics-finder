@@ -56,6 +56,15 @@ app.get("/lyrics", async (req, res, next) => {
   }
 });
 
+app.get('/popular-songs', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.deezer.com/chart/0/tracks?limit=10');
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Could not fetch popular songs' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
