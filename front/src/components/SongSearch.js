@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import './styles/SongSearch.css';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "https://lyrics-finder-0rii.onrender.com/";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://lyrics-finder-0rii.onrender.com";
 const SongSearch = ({ setSongs, setLoading, setLyrics, onError, isLoading }) => {
   const [query, setQuery] = useState("");
   const handleSearchSubmit = async (event) => {
