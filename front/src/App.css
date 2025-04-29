@@ -1,5 +1,5 @@
 .app-container {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -16,9 +16,9 @@
 }
 
 .music-card {
-  width: 90%;
-  margin: 10px 0;
-  padding: 15px;
+  width: 95%;
+  margin: 5px 0;
+  padding: 10px;
   background-color: #e4e4e4;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
@@ -49,6 +49,7 @@
   .app-container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
   }
 
   .app-header {
