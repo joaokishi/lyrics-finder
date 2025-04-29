@@ -1,6 +1,62 @@
 .app-container {
   padding: 10px;
   text-align: center;
+  min-height: 100%;
+  /* max-height: 100vh; */
+  /* overflow-y: auto; */
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 10px auto;
+  max-width: 95%;
+}
+
+/* Embedded view adjustments */
+@media (max-height: 600px) {
+  .app-container {
+    padding: 5px;
+  }
+
+  section {
+    margin: 5px auto;
+  }
+
+  h2 {
+    margin: 8px 0;
+    font-size: 1.2em;
+  }
+}
+
+/* Small screens and embed containers */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 5px;
+  }
+
+  section {
+    max-width: 98%;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    max-width: 90%;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 769px) {
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .app-header {
