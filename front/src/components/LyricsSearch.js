@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./styles/LyricsSearch.css";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://lyrics-finder-0rii.onrender.com/";
 
 const normalizeLyrics = (lyrics) => {
   if (!lyrics) return "";
