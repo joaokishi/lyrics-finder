@@ -1,13 +1,16 @@
 // App.js
 import React, { useState, useCallback } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SongSearch from "./components/SongSearch";
 import SongList from "./components/SongList";
 import LyricsDisplay from "./components/LyricsDisplay";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ErrorMessage from "./components/ErrorMessage";
+import Navbar from "./components/Navbar";
+import Info from "./components/Info";
 import "./App.css";
 
-const App = () => {
+const Home = () => {
   const [songs, setSongs] = useState([]);
   const [lyrics, setLyrics] = useState("");
   const [selectedSongInfo, setSelectedSongInfo] = useState(null);
@@ -24,9 +27,6 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <header className="app-header">
-        <h1>Lyrics 🎶</h1>
-      </header>
       <main>
         <section>
           <SongSearch
@@ -61,5 +61,15 @@ const App = () => {
     </div>
   );
 };
+
+const App = () => (
+  <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/info" element={<Info />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
