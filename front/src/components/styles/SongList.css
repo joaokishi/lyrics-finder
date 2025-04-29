@@ -1,56 +1,83 @@
+/* IMPORTANT: Ensure you have <meta name="viewport" content="width=device-width, initial-scale=1"> in your public/index.html */
+
 .music-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .music-card {
-    width: 95%;
-    margin: 5px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 18px;
+    padding: 18px 8px 32px 8px;
+    background: #f7f8fa;
+    min-height: 60vh;
+}
+
+.music-card {
+    width: 100%;
+    padding: 18px 12px 16px 12px;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     text-align: center;
-  }
-  
-  .music-card img {
-    max-width: 100%;
-    border-radius: 8px;
+    transition: box-shadow 0.25s, transform 0.18s, background 0.18s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.music-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+    transform: translateY(-4px) scale(1.025);
+    background: #f0f4fa;
+}
+
+.music-card img {
+    width: 100%;
+    max-width: 180px;
     height: auto;
-  }
-  
-  .music-card h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  .music-card p {
-    font-size: 14px;
-    color: #666;
+    border-radius: 10px;
     margin-bottom: 10px;
-  }
-  
-  @media (min-width: 600px) {
+    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+}
+
+.music-card h3 {
+    font-size: 1.1rem;
+    color: #222;
+    margin: 10px 0 4px 0;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.music-card p {
+    font-size: 0.97rem;
+    color: #666;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .music-card {
+        flex: 0 0 calc(33.333% - 10px);
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .music-card {
+        flex: 0 0 calc(25% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
     .music-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 15px;
+        padding: 10px 2px 24px 2px;
+        gap: 12px;
     }
-  
     .music-card {
-      width: calc(33% - 30px);
-      margin: 15px;
-      padding: 15px;
+        padding: 12px 6px 12px 6px;
     }
-  }
-  
-  @media (min-width: 900px) {
-    .music-card {
-      width: calc(25% - 30px);
-    }
-  }
+}
   

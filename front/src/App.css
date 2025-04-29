@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+.error-message {
+  width: 100%;
+  text-align: center;
+  color: #dc3545;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 4px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
 main {
   max-width: 100%;
   margin: 0 auto;
