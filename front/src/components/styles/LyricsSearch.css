@@ -1,0 +1,23 @@
+.lyrics-search-button {
+  padding: 12px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.lyrics-search-button:hover {
+  background-color: #1e88e5;
+}
+
+@media (min-width: 600px) {
+  .lyrics-search-button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 0;
+  }
+}

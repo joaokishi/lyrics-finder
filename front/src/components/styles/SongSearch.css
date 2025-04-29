@@ -1,0 +1,49 @@
+.song-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  justify-content: center;
+  height: 100vh;
+}
+
+.song-search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.song-search-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.song-search-button:hover {
+  background-color: #45a049;
+}
+
+@media (min-width: 600px) {
+  .song-search-container {
+    height: auto;
+  }
+
+  .song-search-input {
+    width: 250px;
+  }
+
+  .song-search-button {
+    width: 250px;
+  }
+}

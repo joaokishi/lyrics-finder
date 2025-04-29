@@ -1,0 +1,54 @@
+.music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .music-card {
+    width: 90%;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .music-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+  }
+  
+  .music-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .music-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 600px) {
+    .music-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .music-card {
+      width: calc(33% - 30px);
+      margin: 15px;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .music-card {
+      width: calc(25% - 30px);
+    }
+  }
+  
